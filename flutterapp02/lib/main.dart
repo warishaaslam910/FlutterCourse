@@ -49,6 +49,26 @@ void main() {
 //   }
 // }
 //BUTTON:
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         body: Center(
+//           child: TextButton(
+//             child: Text('ali'),
+//             onPressed: () {
+//               print("student");
+//             },
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -57,14 +77,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
-            TextButton(
-              child: Text('ali'),
-              onPressed: () {
-                print("student");
-              },
-            ),
-          ),
+          child: Container(child: Text("abc")),
         ),
       ),
     );
