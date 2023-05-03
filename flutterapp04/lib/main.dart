@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 12, 155, 20),
-          title: Text(quran.getSurahName(1)),
+          backgroundColor: Color.alphaBlend(Colors.teal, Colors.transparent),
+          title: Text(quran.getSurahName(55)),
         ),
         body: SafeArea(
           child: Padding(
@@ -23,21 +23,28 @@ class MyApp extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-                  Text("Surah Name :" + quran.getSurahNameArabic(1),
+                  Text("Surah Name :" + quran.getSurahNameArabic(55),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
-                              Color.fromARGB(255, 138, 235, 130),
+                              Color.fromARGB(255, 79, 8, 211),
+                              Colors.transparent),
+                          fontSize: 40)),
+                  Text("Surah Name (English): " + quran.getSurahNameEnglish(55),
+                      style: TextStyle(
+                          fontFamily: 'quran',
+                          color: Color.alphaBlend(
+                              Color.fromARGB(255, 30, 57, 211),
                               Colors.transparent),
                           fontSize: 40)),
                   SizedBox(
-                    height: 360,
+                    height: 361,
                     child: ListView.builder(
-                      itemCount: quran.getVerseCount(1),
+                      itemCount: quran.getVerseCount(55),
                       itemBuilder: (context, index) {
                         return ListTile(
                           title: Text(
-                            quran.getVerse(1, index + 1, verseEndSymbol: true),
+                            quran.getVerse(55, index + 1, verseEndSymbol: true),
                             textAlign: TextAlign.right,
                             style: TextStyle(fontFamily: 'quran', fontSize: 26),
                           ),
