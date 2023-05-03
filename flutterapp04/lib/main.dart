@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.alphaBlend(Colors.teal, Colors.transparent),
+          backgroundColor: Color.alphaBlend(
+              Color.fromRGBO(0, 150, 136, 1), Colors.transparent),
           title: Text(quran.getSurahName(55)),
         ),
         body: SafeArea(
@@ -23,33 +24,36 @@ class MyApp extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-                  Text("Surah Name :" + quran.getSurahNameArabic(55),
+                  Text(quran.getSurahNameArabic(55),
                       style: TextStyle(
                           fontFamily: 'quran',
-                          color: Color.alphaBlend(
-                              Color.fromARGB(255, 79, 8, 211),
-                              Colors.transparent),
-                          fontSize: 40)),
-                  Text("Surah Name (English): " + quran.getSurahNameEnglish(55),
+                          color:
+                              Color.alphaBlend(Colors.teal, Colors.transparent),
+                          fontSize: 20)),
+                  Text(quran.getSurahNameEnglish(55),
                       style: TextStyle(
                           fontFamily: 'quran',
-                          color: Color.alphaBlend(
-                              Color.fromARGB(255, 30, 57, 211),
-                              Colors.transparent),
-                          fontSize: 40)),
-                  SizedBox(
-                    height: 361,
-                    child: ListView.builder(
-                      itemCount: quran.getVerseCount(55),
-                      itemBuilder: (context, index) {
-                        return ListTile(
-                          title: Text(
-                            quran.getVerse(55, index + 1, verseEndSymbol: true),
-                            textAlign: TextAlign.right,
-                            style: TextStyle(fontFamily: 'quran', fontSize: 26),
-                          ),
-                        );
-                      },
+                          color:
+                              Color.alphaBlend(Colors.teal, Colors.transparent),
+                          fontSize: 20)),
+                  Container(
+                    color: Color.fromARGB(255, 163, 199, 181),
+                    child: SizedBox(
+                      height: 640, //361 //590
+                      child: ListView.builder(
+                        itemCount: quran.getVerseCount(55),
+                        itemBuilder: (context, index) {
+                          return ListTile(
+                            title: Text(
+                              quran.getVerse(55, index + 1,
+                                  verseEndSymbol: false),
+                              textAlign: TextAlign.right,
+                              style:
+                                  TextStyle(fontFamily: 'quran', fontSize: 22),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                   )
                 ], //children

@@ -90,6 +90,6 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   fonts:
-    - family: quran
+    - family: Al_Mushaf
       fonts:
-        - asset: fonts/quran.ttf
+        - asset: fonts/Al_Mushaf.ttf
