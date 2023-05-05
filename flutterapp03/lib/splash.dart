@@ -36,7 +36,7 @@ class _SplashState extends State<Splash> {
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
             colors: [
-              Colors.brown,
+              Color.fromRGBO(160, 75, 44, 1),
               Color.fromARGB(227, 243, 152, 119),
             ],
           ),
@@ -47,15 +47,18 @@ class _SplashState extends State<Splash> {
             children: [
               Column(children: [
                 Image.asset(
-                  "assets/images/kindpng_2047243.png",
+                  "assets/images/image2.png",
                   height: 300,
                   width: 300,
                 ),
                 Text(
-                  "وَٱلْقُرْءَانِ ٱلْحَكِيم",
+                  // "وَٱلْقُرْءَانِ ٱلْحَكِيم"
+                  "منتخب قرآنی  سورتیں",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 45, color: Color.fromRGBO(228, 226, 226, 1)),
+                      fontFamily: 'quran',
+                      fontSize: 45,
+                      color: Color.fromRGBO(228, 226, 226, 1)),
                 ),
               ]),
               CircularProgressIndicator(),
