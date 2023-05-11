@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import 'package:flutterapp03/surah.dart';
+// import 'package:flutterapp03/surah.dart';
+import 'package:flutterapp03/index.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -21,7 +22,7 @@ class _SplashState extends State<Splash> {
 
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Surah()));
+          context, MaterialPageRoute(builder: (context) => index()));
     });
   }
 
