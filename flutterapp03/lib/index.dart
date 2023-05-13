@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp03/surah.dart';
-import 'package:quran/surah_data.dart';
+// ignore: unused_import
+import 'package:flutterapp03/surah2.dart';
+
+// import 'package:quran/surah_data.dart';
+
 import 'package:quran/quran.dart' as quran;
 import 'package:flutter/widgets.dart';
 
@@ -16,94 +20,121 @@ class _indexState extends State<index> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 100,
+                    width: 1500,
+                    color: Color.fromARGB(255, 240, 140, 94),
+                    child: SizedBox(
+                      child: Text(
+                        "قرآن مجید",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 45,
+                          fontFamily: "quran",
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Surah()));
+                    },
                     child: Container(
-                      height: 100,
+                      height: 80,
                       width: 1500,
                       color: Color.fromARGB(255, 240, 140, 94),
-                      child: SizedBox(
+                      child: Row(children: [
+                        Image.asset(
+                          "assets/images/star-removebg-preview.png",
+                          height: 40,
+                          width: 30,
+                        ),
+                        SizedBox(
+                          child: Text(
+                            textAlign: TextAlign.right,
+                            quran.getSurahNameArabic(1),
+                            style: TextStyle(
+                              fontSize: 38,
+                              fontFamily: "quran",
+                            ),
+                          ),
+                        ),
+                      ]),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => (Surah2)));
+                    },
+                    child: Container(
+                      height: 80,
+                      width: 1500,
+                      color: Color.fromARGB(255, 240, 140, 94),
+                      child: Row(children: [
+                        Image.asset(
+                          "assets/images/star-removebg-preview.png",
+                          height: 40,
+                          width: 30,
+                        ),
+                        SizedBox(
+                          child: Text(
+                            textAlign: TextAlign.right,
+                            quran.getSurahNameArabic(2),
+                            style: TextStyle(
+                              fontSize: 38,
+                              fontFamily: "quran",
+                            ),
+                          ),
+                        ),
+                      ]),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Container(
+                    height: 80,
+                    width: 1500,
+                    color: Color.fromARGB(255, 240, 140, 94),
+                    child: Row(children: [
+                      Image.asset(
+                        "assets/images/star-removebg-preview.png",
+                        height: 40,
+                        width: 30,
+                      ),
+                      SizedBox(
                         child: Text(
-                          "قرآن مجید",
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.right,
+                          quran.getSurahNameArabic(3),
                           style: TextStyle(
-                            fontSize: 45,
+                            fontSize: 38,
                             fontFamily: "quran",
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ),
+                    ]),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Surah()));
-                      },
-                      child: Container(
-                        height: 80,
-                        width: 1500,
-                        color: Color.fromARGB(255, 240, 140, 94),
-                        child: Row(children: [
-                          Image.asset(
-                            "assets/images/star-removebg-preview.png",
-                            height: 40,
-                            width: 30,
-                          ),
-                          SizedBox(
-                            child: Text(
-                              textAlign: TextAlign.right,
-                              quran.getSurahNameArabic(1),
-                              style: TextStyle(
-                                fontSize: 38,
-                                fontFamily: "quran",
-                              ),
-                            ),
-                          ),
-                        ]),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: InkWell(
-                      child: Container(
-                        height: 80,
-                        width: 1500,
-                        color: Color.fromARGB(255, 240, 140, 94),
-                        child: Row(children: [
-                          Image.asset(
-                            "assets/images/star-removebg-preview.png",
-                            height: 40,
-                            width: 30,
-                          ),
-                          SizedBox(
-                            child: Text(
-                              textAlign: TextAlign.right,
-                              quran.getSurahNameArabic(2),
-                              style: TextStyle(
-                                fontSize: 38,
-                                fontFamily: "quran",
-                              ),
-                            ),
-                          ),
-                        ]),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: InkWell(
                     child: Container(
                       height: 80,
                       width: 1500,
@@ -117,7 +148,7 @@ class _indexState extends State<index> {
                         SizedBox(
                           child: Text(
                             textAlign: TextAlign.right,
-                            quran.getSurahNameArabic(3),
+                            quran.getSurahNameArabic(4),
                             style: TextStyle(
                               fontSize: 38,
                               fontFamily: "quran",
@@ -127,92 +158,68 @@ class _indexState extends State<index> {
                       ]),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: InkWell(
-                      child: Container(
-                        height: 80,
-                        width: 1500,
-                        color: Color.fromARGB(255, 240, 140, 94),
-                        child: Row(children: [
-                          Image.asset(
-                            "assets/images/star-removebg-preview.png",
-                            height: 40,
-                            width: 30,
-                          ),
-                          SizedBox(
-                            child: Text(
-                              textAlign: TextAlign.right,
-                              quran.getSurahNameArabic(4),
-                              style: TextStyle(
-                                fontSize: 38,
-                                fontFamily: "quran",
-                              ),
-                            ),
-                          ),
-                        ]),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Container(
+                    height: 80,
+                    width: 1500,
+                    color: Color.fromARGB(255, 240, 140, 94),
+                    child: Row(children: [
+                      Image.asset(
+                        "assets/images/star-removebg-preview.png",
+                        height: 40,
+                        width: 30,
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Container(
-                      height: 80,
-                      width: 1500,
-                      color: Color.fromARGB(255, 240, 140, 94),
-                      child: Row(children: [
-                        Image.asset(
-                          "assets/images/star-removebg-preview.png",
-                          height: 40,
-                          width: 30,
-                        ),
-                        SizedBox(
-                          child: Text(
-                            textAlign: TextAlign.right,
-                            quran.getSurahNameArabic(5),
-                            style: TextStyle(
-                              fontSize: 38,
-                              fontFamily: "quran",
-                            ),
+                      SizedBox(
+                        child: Text(
+                          textAlign: TextAlign.right,
+                          quran.getSurahNameArabic(5),
+                          style: TextStyle(
+                            fontSize: 38,
+                            fontFamily: "quran",
                           ),
                         ),
-                      ]),
-                    ),
+                      ),
+                    ]),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Container(
-                      height: 80,
-                      width: 1500,
-                      color: Color.fromARGB(255, 240, 140, 94),
-                      child: Row(children: [
-                        Image.asset(
-                          "assets/images/star-removebg-preview.png",
-                          height: 40,
-                          width: 30,
-                        ),
-                        SizedBox(
-                          child: Text(
-                            textAlign: TextAlign.right,
-                            quran.getSurahNameArabic(6),
-                            style: TextStyle(
-                              fontSize: 38,
-                              fontFamily: "quran",
-                            ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Container(
+                    height: 80,
+                    width: 1500,
+                    color: Color.fromARGB(255, 240, 140, 94),
+                    child: Row(children: [
+                      Image.asset(
+                        "assets/images/star-removebg-preview.png",
+                        height: 40,
+                        width: 30,
+                      ),
+                      SizedBox(
+                        child: Text(
+                          textAlign: TextAlign.right,
+                          quran.getSurahNameArabic(6),
+                          style: TextStyle(
+                            fontSize: 38,
+                            fontFamily: "quran",
                           ),
                         ),
-                      ]),
-                    ),
+                      ),
+                    ]),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ), //main col
+          )),
+      //main col
     );
   }
 }
+
+class Surah2 {}
+
+
 
 
 // return Scaffold(
