@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:quran/quran.dart' as quran;
 
-class surrat extends StatefulWidget {
-  const surrat({super.key});
+class surah4 extends StatefulWidget {
+  const surah4({super.key});
 
   @override
-  State<surrat> createState() => _surratState();
+  State<surah4> createState() => _surah4State();
 }
 
-class _surratState extends State<surrat> {
+class _surah4State extends State<surah4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.alphaBlend(Colors.brown, Colors.transparent),
-        title: Text(quran.getSurahName(3)),
+        title: Text(quran.getSurahName(55)),
       ),
       body: Container(
         color: Color.fromARGB(255, 223, 175, 131),
@@ -24,14 +24,14 @@ class _surratState extends State<surrat> {
             child: Center(
               child: Column(
                 children: [
-                  Text(quran.getSurahNameArabic(3),
+                  Text(quran.getSurahNameArabic(55),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
                               Color.fromARGB(255, 124, 82, 66),
                               Colors.transparent),
                           fontSize: 25)),
-                  Text(quran.getSurahNameEnglish(3),
+                  Text(quran.getSurahNameEnglish(55),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
@@ -44,23 +44,25 @@ class _surratState extends State<surrat> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Column(children: [
-                            SizedBox(
-                              height: 425, //360
-                              child: ListView.builder(
-                                itemCount: quran.getVerseCount(3),
-                                itemBuilder: (context, index) {
-                                  return ListTile(
-                                    title: Text(
-                                      quran.getVerse(3, index + 1,
-                                          verseEndSymbol: false),
-                                      textAlign: TextAlign.right,
-                                      style: TextStyle(
-                                          fontFamily: 'quran', fontSize: 26),
-                                    ),
-                                  );
-                                },
+                            SingleChildScrollView(
+                              child: SizedBox(
+                                height: 425, //360
+                                child: ListView.builder(
+                                  itemCount: quran.getVerseCount(55),
+                                  itemBuilder: (context, index) {
+                                    return ListTile(
+                                      title: Text(
+                                        quran.getVerse(55, index + 1,
+                                            verseEndSymbol: false),
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            fontFamily: 'quran', fontSize: 26),
+                                      ),
+                                    );
+                                  },
+                                ),
                               ),
-                            ),
+                            )
                           ]),
                         ]),
                   )
@@ -71,6 +73,5 @@ class _surratState extends State<surrat> {
         ),
       ),
     );
-    ;
   }
 }

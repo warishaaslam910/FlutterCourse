@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:quran/quran.dart' as quran;
 
-class Surah2 extends StatefulWidget {
-  const Surah2({super.key});
+class surah2 extends StatefulWidget {
+  const surah2({super.key});
 
   @override
-  State<Surah2> createState() => _Surah2State();
+  State<surah2> createState() => _surah2State();
 }
 
-class _Surah2State extends State<Surah2> {
+class _surah2State extends State<surah2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.alphaBlend(Colors.brown, Colors.transparent),
-        title: Text(quran.getSurahName(2)),
+        title: Text(quran.getSurahName(60)),
       ),
       body: Container(
         color: Color.fromARGB(255, 223, 175, 131),
@@ -24,14 +24,14 @@ class _Surah2State extends State<Surah2> {
             child: Center(
               child: Column(
                 children: [
-                  Text(quran.getSurahNameArabic(2),
+                  Text(quran.getSurahNameArabic(60),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
                               Color.fromARGB(255, 124, 82, 66),
                               Colors.transparent),
                           fontSize: 25)),
-                  Text(quran.getSurahNameEnglish(2),
+                  Text(quran.getSurahNameEnglish(60),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
@@ -44,23 +44,25 @@ class _Surah2State extends State<Surah2> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Column(children: [
-                            SizedBox(
-                              height: 425, //360
-                              child: ListView.builder(
-                                itemCount: quran.getVerseCount(1),
-                                itemBuilder: (context, index) {
-                                  return ListTile(
-                                    title: Text(
-                                      quran.getVerse(2, index + 1,
-                                          verseEndSymbol: false),
-                                      textAlign: TextAlign.right,
-                                      style: TextStyle(
-                                          fontFamily: 'quran', fontSize: 26),
-                                    ),
-                                  );
-                                },
+                            SingleChildScrollView(
+                              child: SizedBox(
+                                height: 425, //360
+                                child: ListView.builder(
+                                  itemCount: quran.getVerseCount(60),
+                                  itemBuilder: (context, index) {
+                                    return ListTile(
+                                      title: Text(
+                                        quran.getVerse(60, index + 1,
+                                            verseEndSymbol: false),
+                                        textAlign: TextAlign.right,
+                                        style: TextStyle(
+                                            fontFamily: 'quran', fontSize: 26),
+                                      ),
+                                    );
+                                  },
+                                ),
                               ),
-                            ),
+                            )
                           ]),
                         ]),
                   )
@@ -73,3 +75,59 @@ class _Surah2State extends State<Surah2> {
     );
   }
 }
+
+
+// body: Container(
+//         color: Color.fromARGB(255, 223, 175, 131),
+//         child: SafeArea(
+//           child: Padding(
+//             padding: EdgeInsets.all(15.0),
+//             child: Center(
+//               child: Column(
+//                 children: [
+//                   Text(quran.getSurahNameArabic(3),
+//                       style: TextStyle(
+//                           fontFamily: 'quran',
+//                           color: Color.alphaBlend(
+//                               Color.fromARGB(255, 124, 82, 66),
+//                               Colors.transparent),
+//                           fontSize: 25)),
+//                   Text(quran.getSurahNameEnglish(3),
+//                       style: TextStyle(
+//                           fontFamily: 'quran',
+//                           color: Color.alphaBlend(
+//                               Colors.brown, Colors.transparent),
+//                           fontSize: 25)
+//                           ), //40
+
+//                   SingleChildScrollView(
+                    
+//                     child: Column(
+//                         crossAxisAlignment: CrossAxisAlignment.center,
+//                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                       
+//                         children: [
+//                           Column(children: [
+//                             ListView.builder(
+//                               itemCount: quran.getVerseCount(3),
+//                               itemBuilder: (context, index) {
+//                                 return ListTile(
+//                                   title: Text(
+//                                     quran.getVerse(3, index + 1,
+//                                         verseEndSymbol: false),
+//                                     textAlign: TextAlign.right,
+//                                     style: TextStyle(
+//                                         fontFamily: 'quran', fontSize: 26),
+//                                   ),
+//                                 );
+//                               },
+//                             ),
+//                           ]),
+//                         ]),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ),
+//         ),
+//       ),

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:quran/quran.dart' as quran;
 
-class Surah extends StatefulWidget {
-  const Surah({super.key});
+class surah7 extends StatefulWidget {
+  const surah7({super.key});
 
   @override
-  State<Surah> createState() => _SurahState();
+  State<surah7> createState() => _surah7State();
 }
 
-class _SurahState extends State<Surah> {
+class _surah7State extends State<surah7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.alphaBlend(Colors.brown, Colors.transparent),
-        title: Text(quran.getSurahName(1)),
+        title: Text(quran.getSurahName(18)),
       ),
       body: Container(
         color: Color.fromARGB(255, 223, 175, 131),
@@ -24,14 +24,14 @@ class _SurahState extends State<Surah> {
             child: Center(
               child: Column(
                 children: [
-                  Text(quran.getSurahNameArabic(1),
+                  Text(quran.getSurahNameArabic(18),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
                               Color.fromARGB(255, 124, 82, 66),
                               Colors.transparent),
                           fontSize: 25)),
-                  Text(quran.getSurahNameEnglish(1),
+                  Text(quran.getSurahNameEnglish(18),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
@@ -48,11 +48,11 @@ class _SurahState extends State<Surah> {
                               child: SizedBox(
                                 height: 425, //360
                                 child: ListView.builder(
-                                  itemCount: quran.getVerseCount(1),
+                                  itemCount: quran.getVerseCount(18),
                                   itemBuilder: (context, index) {
                                     return ListTile(
                                       title: Text(
-                                        quran.getVerse(1, index + 1,
+                                        quran.getVerse(18, index + 1,
                                             verseEndSymbol: false),
                                         textAlign: TextAlign.right,
                                         style: TextStyle(
@@ -62,7 +62,7 @@ class _SurahState extends State<Surah> {
                                   },
                                 ),
                               ),
-                            ),
+                            )
                           ]),
                         ]),
                   )
