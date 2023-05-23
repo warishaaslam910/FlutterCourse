@@ -47,7 +47,8 @@ class _indexState extends State<index> {
                     context, MaterialPageRoute(builder: (context) => Surah()));
               })),
               leading: Image.asset(
-                "assets/images/star-removebg-preview.png",
+                
+                "assets/images/star4.png",
                 height: 40,
                 width: 30,
               ),
@@ -73,7 +74,7 @@ class _indexState extends State<index> {
                     context, MaterialPageRoute(builder: (context) => surah2()));
               })),
               leading: Image.asset(
-                "assets/images/star-removebg-preview.png",
+                 "assets/images/star4.png",
                 height: 40,
                 width: 30,
               ),
@@ -99,7 +100,7 @@ class _indexState extends State<index> {
                     context, MaterialPageRoute(builder: (context) => surah3()));
               })),
               leading: Image.asset(
-                "assets/images/star-removebg-preview.png",
+                "assets/images/star4.png",
                 height: 40,
                 width: 30,
               ),
@@ -126,7 +127,7 @@ class _indexState extends State<index> {
                     MaterialPageRoute(builder: (context) => (surah4())));
               },
               leading: Image.asset(
-                "assets/images/star-removebg-preview.png",
+                 "assets/images/star4.png",
                 height: 40,
                 width: 30,
               ),
@@ -152,7 +153,7 @@ class _indexState extends State<index> {
                     MaterialPageRoute(builder: (context) => (surah5())));
               },
               leading: Image.asset(
-                "assets/images/star-removebg-preview.png",
+                 "assets/images/star4.png",
                 height: 40,
                 width: 30,
               ),
@@ -179,7 +180,7 @@ class _indexState extends State<index> {
                     context, MaterialPageRoute(builder: (context) => surah6()));
               })),
               leading: Image.asset(
-                "assets/images/star-removebg-preview.png",
+                "assets/images/star4.png",
                 height: 40,
                 width: 30,
               ),
@@ -205,7 +206,7 @@ class _indexState extends State<index> {
                     context, MaterialPageRoute(builder: (context) => surah7()));
               })),
               leading: Image.asset(
-                "assets/images/star-removebg-preview.png",
+                 "assets/images/star4.png",
                 height: 40,
                 width: 30,
               ),
@@ -231,7 +232,7 @@ class _indexState extends State<index> {
                     context, MaterialPageRoute(builder: (context) => surah8()));
               })),
               leading: Image.asset(
-                "assets/images/star-removebg-preview.png",
+                 "assets/images/star4.png",
                 height: 40,
                 width: 30,
               ),
