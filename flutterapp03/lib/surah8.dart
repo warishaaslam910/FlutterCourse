@@ -14,7 +14,7 @@ class _surah8State extends State<surah8> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.alphaBlend(Colors.brown, Colors.transparent),
-        title: Text(quran.getSurahName(36)),
+        title: Text(quran.getSurahName(87)),
       ),
       body: Container(
         color: Color.fromARGB(255, 223, 175, 131),
@@ -24,14 +24,14 @@ class _surah8State extends State<surah8> {
             child: Center(
               child: Column(
                 children: [
-                  Text(quran.getSurahNameArabic(36),
+                  Text(quran.getSurahNameArabic(87),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
                               Color.fromARGB(255, 124, 82, 66),
                               Colors.transparent),
                           fontSize: 25)),
-                  Text(quran.getSurahNameEnglish(36),
+                  Text(quran.getSurahNameEnglish(87),
                       style: TextStyle(
                           fontFamily: 'quran',
                           color: Color.alphaBlend(
@@ -48,11 +48,11 @@ class _surah8State extends State<surah8> {
                               child: SizedBox(
                                 height: 425, //360
                                 child: ListView.builder(
-                                  itemCount: quran.getVerseCount(36),
+                                  itemCount: quran.getVerseCount(87),
                                   itemBuilder: (context, index) {
                                     return ListTile(
                                       title: Text(
-                                        quran.getVerse(36, index + 1,
+                                        quran.getVerse(87, index + 1,
                                             verseEndSymbol: false),
                                         textAlign: TextAlign.right,
                                         style: TextStyle(

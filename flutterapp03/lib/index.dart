@@ -54,13 +54,13 @@ class _indexState extends State<index> {
               ),
               title: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameArabic(1),
+                quran.getSurahNameArabic(18),
                 style: TextStyle(
                     fontSize: 38, fontFamily: "quran", color: Colors.white),
               ),
               subtitle: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameEnglish(1),
+                quran.getSurahNameEnglish(18),
                 style: TextStyle(
                     fontSize: 13, fontFamily: "quran", color: Colors.white),
               ),
@@ -80,13 +80,13 @@ class _indexState extends State<index> {
               ),
               title: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameArabic(60),
+                quran.getSurahNameArabic(32),
                 style: TextStyle(
                     fontSize: 38, fontFamily: "quran", color: Colors.white),
               ),
               subtitle: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameEnglish(60),
+                quran.getSurahNameEnglish(32),
                 style: TextStyle(
                     fontSize: 13, fontFamily: "quran", color: Colors.white),
               ),
@@ -106,13 +106,13 @@ class _indexState extends State<index> {
               ),
               title: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameArabic(3),
+                quran.getSurahNameArabic(36),
                 style: TextStyle(
                     fontSize: 38, fontFamily: "quran", color: Colors.white),
               ),
               subtitle: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameEnglish(3),
+                quran.getSurahNameEnglish(36),
                 style: TextStyle(
                     fontSize: 13, fontFamily: "quran", color: Colors.white),
               ),
@@ -212,13 +212,13 @@ class _indexState extends State<index> {
               ),
               title: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameArabic(18),
+                quran.getSurahNameArabic(86),
                 style: TextStyle(
                     fontSize: 38, fontFamily: "quran", color: Colors.white),
               ),
               subtitle: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameEnglish(18),
+                quran.getSurahNameEnglish(86),
                 style: TextStyle(
                     fontSize: 13, fontFamily: "quran", color: Colors.white),
               ),
@@ -238,13 +238,13 @@ class _indexState extends State<index> {
               ),
               title: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameArabic(36),
+                quran.getSurahNameArabic(87),
                 style: TextStyle(
                     fontSize: 38, fontFamily: "quran", color: Colors.white),
               ),
               subtitle: Text(
                 textAlign: TextAlign.left,
-                quran.getSurahNameEnglish(36),
+                quran.getSurahNameEnglish(87),
                 style: TextStyle(
                     fontSize: 13, fontFamily: "quran", color: Colors.white),
               ),
