@@ -11,7 +11,7 @@ class _ExpState extends State<Exp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Row(
         children: [
           Expanded(
 
@@ -23,6 +23,7 @@ class _ExpState extends State<Exp> {
           )),
            Expanded(
             flex: 2,
+            
               child: 
           Container(
             width: 100,
