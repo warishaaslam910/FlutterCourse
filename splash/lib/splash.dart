@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:splash/dashboard.dart';
+
+import 'package:splash/splash2.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -18,7 +19,7 @@ class _SplashState extends State<Splash> {
 
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Dashboard()));
+          context, MaterialPageRoute(builder: (context) => splash2()));
     });
   }
 
@@ -27,10 +28,10 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       body: Center(
           child: Container(
-              color: Colors.blue,
+              color: const Color.fromARGB(255, 33, 243, 68),
               child: Center(
                   child: Text(
-                "Warisha Aslam ",
+                "Warisha  ",
                 style: TextStyle(fontSize: 30, color: Colors.white),
               )))),
     );

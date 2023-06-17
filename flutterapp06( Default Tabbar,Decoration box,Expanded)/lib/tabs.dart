@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp06/chats.dart';
 
 class tabs extends StatefulWidget {
   const tabs({super.key});
@@ -16,34 +17,35 @@ class _tabsState extends State<tabs> {
         appBar: AppBar(
             title: Text("MyBook"),
             backgroundColor: const Color.fromARGB(255, 7, 78, 136),
-            bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(20.0),
-              child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                    width: MediaQuery.of(context).size.width / 2,
-                    child:TabBar(
+            bottom: 
+            TabBar(
+                      
                       isScrollable: true,
                       tabs: [
+
                         Tab(
-                          text: ("Contacts"),
+                          text: ("Chats"),
                         ),
-                        Tab(
-                          text: ("Calls"),
-                        ),
-                        Tab(
-                          text: ("Status"),
-                        ),
-                        Tab(
-                          text: ("Streaks"),
-                        ),
-                        Tab(
-                          text: ("Community"),
-                        ),
+                        // Tab(
+                        //   text: ("Calls"),
+                        // ),
+                        // Tab(
+                        //   text: ("Status"),
+                        // ),
+                        // Tab(
+                        //   text: ("Streaks"),
+                        // ),
+                        // Tab(
+                        //   text: ("Community"),
+                        // ),
                       ],
                     ),
-                  )),
-            )),
+                  ),
+            
+           body: TabBarView(children: [
+chats(),
+
+           ],),
       ),
     );
   }
