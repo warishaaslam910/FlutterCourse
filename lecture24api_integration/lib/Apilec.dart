@@ -31,28 +31,28 @@ class _ApilecState extends State<Apilec> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Container(
-        child: ElevatedButton(
-            onPressed: getinfo, child: Text("get data from api")),
-      ),
-    //     body: FutureBuilder(
-    //   future: getinfo(),
-    //   builder: (context, AsyncSnapshot snapshot) {
-    //     if (snapshot.data == null) {
-    //       return Text("no data in api");
-    //     } else {
-    //       return ListView.builder(
-    //         itemCount: snapshot.data.length,
-    //         itemBuilder: (context, index) {
-    //           return ListTile(
-    //             title: Text(snapshot.data[index].a),
-    //             subtitle: Text(snapshot.data[index].id),
-    //           );
-    //         },
-    //       );
-    //     }
-    //   },
-    // )
+      //  body: Container(
+      //   child: ElevatedButton(
+      //       onPressed: getinfo, child: Text("get data from api")),
+      // ),
+        body: FutureBuilder(
+      future: getinfo(),
+      builder: (context, AsyncSnapshot snapshot) {
+        if (snapshot.data == null) {
+          return Text("no data in api");
+        } else {
+          return ListView.builder(
+            itemCount: snapshot.data.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text(snapshot.data[index].a),
+                subtitle: Text(snapshot.data[index].id),
+              );
+            },
+          );
+        }
+      },
+    )
     );
   }
 }

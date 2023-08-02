@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp16_quranapi/Quranap.dart';
+import 'package:flutterapp16_quranapi/Quranap1.dart';
 
 void main() {
   runApp(const MyApp());

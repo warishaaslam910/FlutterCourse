@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lecture24api_integration/Apilec1.dart';
+import 'package:lecture24api_integration/Apilect3.dart';
 
-import 'Apilec.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(body: Apilec()),);
+    return MaterialApp(home: Scaffold(body: Apilec3()),);
   }
 }
 
