@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 late String responsedata;
+late Map mapresp;
+late List listresp;
 
 class Apilec3 extends StatefulWidget {
   const Apilec3({super.key});
@@ -13,13 +15,19 @@ class Apilec3 extends StatefulWidget {
 }
 
 class _Apilec3State extends State<Apilec3> {
+
+
+  
   Future apicallkardo() async {
     http.Response response =
-        await http.get(Uri.parse("https://reqres.in/api/users/2"));
+        await http.get(Uri.parse("https://reqres.in/api/users?page=2"));
 
     if (response.statusCode == 200) {
       setState(() {
-        responsedata = response.body;
+        // responsedata = response.body;
+
+        mapresp = jsonDecode(response.body);
+        listresp = mapresp["data"];
       });
     }
   }
@@ -34,14 +42,31 @@ class _Apilec3State extends State<Apilec3> {
 
   @override
   Widget build(BuildContext context) {
+    // return Scaffold(
+    //     body: Center(
+    //         child: Container(
+    //   width: 500,
+    //   height: 500,
+    //   color: Colors.amber,
+    //   child: Text(
+    //       // responsedata.toString()),
+    //       // mapresp["support"]["url"].toString()
+    //       listresp[3]["first_name"].toString()),
+    // )));
+
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: 800,
-        color: Colors.amber,
-        child: (responsedata == null)
-            ? Text("data is loading")
-            : Text("${responsedata}"),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(listresp[index]["first_name"]),
+            subtitle: Text(listresp[index]["email"]),
+            trailing: Text(listresp[index]["id"].toString()),
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(listresp[index]["avatar"]),
+            ),
+          );
+        },
+        itemCount: listresp.length,
       ),
     );
   }

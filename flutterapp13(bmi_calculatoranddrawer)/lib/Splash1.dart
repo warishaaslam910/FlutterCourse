@@ -1,21 +1,15 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-
-import 'package:flutterapp06/splash2.dart';
-
-// import 'package:flutterapp06/tabs.dart';
-
+import 'package:flutterapp13_bmi_calculatoranddrawer/Mydrawer.dart';
 import 'dart:async';
 
-class splash extends StatefulWidget {
-  const splash({super.key});
+class Splash1 extends StatefulWidget {
+  const Splash1({super.key});
 
   @override
-  State<splash> createState() => _splashState();
+  State<Splash1> createState() => _Splash1State();
 }
 
-class _splashState extends State<splash> {
+class _Splash1State extends State<Splash1> {
   
   double boxwidth = 100;
   double boxheight = 200;
@@ -59,7 +53,7 @@ void addanim() {
     setState(() {});
    void changescreen() {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Splash2()));
+          context, MaterialPageRoute(builder: (context) => Mydrawer()));
     }
 
     Timer(Duration(seconds: 6), () {
