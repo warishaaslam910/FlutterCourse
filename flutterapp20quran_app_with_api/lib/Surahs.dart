@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutterapp16_quranapi/Surahindex.dart';
+import 'package:flutterapp20quran_app_with_api/Surahindex.dart';
 import 'package:http/http.dart' as http;
 
 late Map globalmap = {};
@@ -10,7 +10,6 @@ late List datalist = [];
 
 class Surahs extends StatefulWidget {
   final Surahindex name;
-  // const Surahs({Key? key, required this.name}): (super key:key);
   Surahs({Key? key, required this.name}) : super(key: key);
 
   @override
@@ -25,39 +24,33 @@ class _SurahsState extends State<Surahs> {
       setState(() {
         globalmap = jsonDecode(response.body);
         datamap = globalmap["data"];
-        datalist = datamap["surahs"][widget.name.number ]["ayahs"];
-
-
-        
+        datalist = datamap["surahs"][widget.name.number]["ayahs"];
       });
     }
   }
 
-
   @override
   void initState() {
-    // TODO: implement initState
-
-    getapi();
+    
     super.initState();
+    getapi();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView.builder(
-      itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(
-            "${datalist[index]["text"]}",
-            textDirection: TextDirection.rtl,
-            style: TextStyle(fontFamily: 'alq', color: Colors.black),
-          ),
-        );
-      },
-      itemCount: datalist == null ? 0 : datalist.length,
-    ));
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(
+              "${datalist[index]["text"]}",
+              textDirection: TextDirection.rtl,
+              style: TextStyle(fontFamily: 'alq', color: Colors.black),
+            ),
+          );
+        },
+        itemCount: datalist == null ? 0 : datalist.length,
+      ),
+    );
   }
 }
-
-
