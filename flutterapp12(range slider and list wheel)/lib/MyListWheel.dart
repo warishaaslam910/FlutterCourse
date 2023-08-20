@@ -84,7 +84,7 @@ RangeValues values=RangeValues(2000, 3000);
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  color: Color.fromARGB(255, 202, 82, 26),
+                  color: Color.fromARGB(255, 192, 144, 122),
                   child: Column(children: [
                     Padding(padding: EdgeInsets.all(20.0)),
                     SizedBox(
@@ -106,8 +106,9 @@ RangeValues values=RangeValues(2000, 3000);
           ),
         
       ),
-      
+    backgroundColor: Color.fromARGB(255, 17, 17, 17),  
     );
+    
   }
 }
 
