@@ -53,10 +53,15 @@ class Db_helper {
     return await db!.update(db_table, row, where: '$dt_id=?', whereArgs: [id]);
   }
 
-// delete records
-  Future<int> deleteRecord(int id) async {
+//delete records
+  // Future<int> deleteRecord(int id) async {
+  //   Database? db = await instance.database;
+  //   return await db!.delete(db_table, where: '$dt_id=?', whereArgs: [id]);
+  // }
+
+  Future<int> deleteRecord(String name) async {
     Database? db = await instance.database;
-    return await db!.delete(db_table, where: '$dt_id=?', whereArgs: [id]);
+    return await db!.delete(db_table, where: '$dt_name=?', whereArgs: [name]);
   }
 }
 

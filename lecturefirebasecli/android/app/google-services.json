@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1599139138",
+    "project_id": "dummy-552a0",
+    "storage_bucket": "dummy-552a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1599139138:android:6103666bc0c7b868aa6cdb",
+        "android_client_info": {
+          "package_name": "com.example.lecturefirebasecli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1599139138-23naal2mm9fh72cpgmago3mogo518p6d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk4H6thA4DCpvFOdKEyEi1h8OwyiCYjTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1599139138-23naal2mm9fh72cpgmago3mogo518p6d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

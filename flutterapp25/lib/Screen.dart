@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Create.dart';
+import 'Del.dart';
 import 'Read.dart';
 import 'Services/Db_helper.dart';
 
@@ -30,6 +31,7 @@ class _ScreenState extends State<Screen> {
                   //     .insertRecord({Db_helper.dt_name: "Arsalan Shah"});
                 },
                 child: Text("Create")),
+
             ElevatedButton(
                 onPressed: () async {
                   Navigator.push(
@@ -42,6 +44,7 @@ class _ScreenState extends State<Screen> {
                   // print(query);
                 },
                 child: Text("Read")),
+
             // ElevatedButton(
             //     onPressed: () async {
             //       await Db_helper.instance.updateRecord({
@@ -50,14 +53,17 @@ class _ScreenState extends State<Screen> {
             //       });
             //     },
             //     child: Text("Update")),
+
             ElevatedButton(
                 onPressed: () {
-                  for (int i = 1; i < 38; i++) {
-                    Db_helper.instance.deleteRecord(i);
-                  }
+                  // for (int i = 1; i < 38; i++) {
+                  //   Db_helper.instance.deleteRecord(i);
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Del()));
+
                   // Db_helper.instance.deleteRecord(1);
                 },
-                child: Text("Delete")),
+                child: Text('Delete')),
           ],
         ),
       ),
