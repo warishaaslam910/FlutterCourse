@@ -13,8 +13,6 @@ class Update extends StatefulWidget {
 class _UpdateState extends State<Update> {
   var newname = TextEditingController();
 
-  var _scaffoldKey;
-
   // List<Map<String, dynamic>> updatedlist = [];
 
   @override
@@ -25,7 +23,6 @@ class _UpdateState extends State<Update> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
       body: Column(
         children: [
           Padding(
