@@ -12,6 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int a = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +26,7 @@ class _HomeState extends State<Home> {
           IconButton(
               onPressed: () async {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Addblog()));
+                    MaterialPageRoute(builder: (context) => Addblog(a)));
               },
               icon: Icon(Icons.add)),
           IconButton(

@@ -80,11 +80,16 @@ class _SignupState extends State<Signup> {
               child: ElevatedButton(
                   onPressed: () async {
                     try {
-                      final credential = await FirebaseAuth.instance
+                      //final credential =
+                      await FirebaseAuth.instance
                           .createUserWithEmailAndPassword(
                         email: useremail.text,
                         password: userpassword.text,
-                      );
+                      )
+                          .then((value) {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Home()));
+                      });
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'weak-password') {
                         print('The password provided is too weak.');
@@ -94,9 +99,9 @@ class _SignupState extends State<Signup> {
                     } catch (e) {
                       print(e);
                     }
-                    ///////////////////////////////
-                    //   Navigator.push(context,
-                    //  MaterialPageRoute(builder: (context) => Home()));
+                    /////////////////////////////
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => Home()));
                   },
                   child: Text('SIGNUP')),
             )
