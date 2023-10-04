@@ -106,6 +106,8 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp27_map_api/Searchlocation.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import 'CurrentLocation.dart';
+
 class MyMap extends StatefulWidget {
   const MyMap({super.key});
 
@@ -146,9 +148,10 @@ class _MyMapState extends State<MyMap> {
                     hintText: "Search here",
                   ),
                   onChanged: (value) {
-                    // Handle search functionality here
                     print("search value =>" + value);
-                    setState(() {});
+                    setState(() {
+                      Searchlocation().getapi(value);
+                    });
                   },
                 ),
               ),
@@ -183,9 +186,7 @@ class _MyMapState extends State<MyMap> {
             alignment: Alignment.bottomLeft,
             child: ElevatedButton(
               onPressed: () {
-                // Handle current location functionality here
-                print("Current Location button pressed");
-                // Call your current location method here
+                CurrentLocation().calllocation(markerpts, mapcompleter);
               },
               style: ElevatedButton.styleFrom(
                 primary: Color(0xFF166403), // Background color
@@ -230,10 +231,4 @@ class _MyMapState extends State<MyMap> {
       }
     });
   }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: MyMap(),
-  ));
 }

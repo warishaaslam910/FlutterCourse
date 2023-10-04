@@ -99,9 +99,6 @@ class _SignupState extends State<Signup> {
                     } catch (e) {
                       print(e);
                     }
-                    /////////////////////////////
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => Home()));
                   },
                   child: Text('SIGNUP')),
             )

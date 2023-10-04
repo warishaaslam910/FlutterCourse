@@ -84,6 +84,9 @@ class _LoginState extends State<Login> {
                           .signInWithEmailAndPassword(
                               email: loginemail.text,
                               password: loginpassword.text);
+                      setState(() {});
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home()));
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
                         toastmsg('NO USER FOUND');
@@ -92,12 +95,9 @@ class _LoginState extends State<Login> {
                         toastmsg('INCORRECT PASSWORD');
                         print('Wrong password provided for that user.');
                       }
-                      setState(() {});
                     }
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home()));
                   },
-                  child: Text('LOGI')),
+                  child: Text('LOGIN')),
             )
           ],
         ),

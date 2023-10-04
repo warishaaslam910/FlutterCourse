@@ -82,16 +82,12 @@ class Searchlocation {
     String searchinput = searchval;
     print("search value smas=>" + searchinput);
     String request =
-        "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Paris&types=geocode&key=AIzaSyAwo0laaXX_Kx3bf6oANDdcPmOnJglnyn4";
+        "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$searchinput&types=geocode&key=AIzaSyAwo0laaXX_Kx3bf6oANDdcPmOnJglnyn4";
     http.Response response = await http.get(Uri.parse(request));
     print("apidata = " + response.body);
     if (response.statusCode == 200) {
-      setState(() {
-        response_map = jsonDecode(response.body);
-        response_list = response_map["predictions"];
-      });
+      response_map = jsonDecode(response.body);
+      response_list = response_map["predictions"];
     }
   }
 }
-
-void setState(Null Function() param0) {}

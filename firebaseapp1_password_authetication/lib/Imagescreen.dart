@@ -68,9 +68,7 @@ class _ImagescreenState extends State<Imagescreen> {
                   }).onError((error, stackTrace) {
                     Toastmsg().toast(error.toString());
                   });
-                  // Toastmsg().toast("Image Uploaded");
-                  // }).onError((error, stackTrace) {
-                  //   Toastmsg().toast(error.toString());
+                 
                 });
               },
               child: Text('Upload Image')),
