@@ -93,7 +93,7 @@ class _SurahState extends State<Surah> {
       appBar: AppBar(
           title: Text(
             quran.getSurahName(widget.indexsurah + 1),
-            style: TextStyle(fontFamily: 'fontqur', color: Colors.white),
+            style: TextStyle(fontFamily: 'quran', color: Colors.white),
           ),
           backgroundColor: Colors.brown[900]),
       body: SafeArea(
@@ -114,7 +114,7 @@ class _SurahState extends State<Surah> {
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             fontSize: 25,
-                            fontFamily: 'fontqur',
+                            fontFamily: 'quran',
                             color: Color.fromARGB(255, 245, 247, 241)),
                       ),
                       leading: CircleAvatar(

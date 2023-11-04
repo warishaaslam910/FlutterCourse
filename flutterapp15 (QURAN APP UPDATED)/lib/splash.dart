@@ -51,8 +51,8 @@ class _SplashState extends State<Splash> {
                   width: 300,
                 ),
                 Text(
-                  // "وَٱلْقُرْءَانِ ٱلْحَكِيم"
-                  "منتخب قرآنی  سورتیں",
+                  "وَٱلْقُرْءَانِ ٱلْحَكِيم",
+                  //"منتخب قرآنی  سورتیں",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontFamily: 'quran',
